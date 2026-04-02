@@ -1,0 +1,207 @@
+/* Gmail Follow-Up Reminder — Popup Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 380px;
+  max-height: 500px;
+  font-family: 'Google Sans', Roboto, Arial, sans-serif;
+  background: #fff;
+  color: #3c4043;
+  overflow-y: auto;
+}
+
+.popup-container {
+  padding: 0;
+}
+
+.popup-header {
+  padding: 16px 20px 12px;
+  border-bottom: 1px solid #e8eaed;
+}
+
+.popup-header h1 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.popup-tabs {
+  display: flex;
+  border-bottom: 1px solid #e8eaed;
+  padding: 0 20px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 13px;
+  font-weight: 500;
+  color: #5f6368;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.tab-btn:hover {
+  color: #1a73e8;
+}
+
+.tab-btn.active {
+  color: #1a73e8;
+  border-bottom-color: #1a73e8;
+}
+
+.reminder-list {
+  padding: 8px 0;
+}
+
+.reminder-item {
+  padding: 12px 20px;
+  border-bottom: 1px solid #f1f3f4;
+  transition: background 0.1s ease;
+}
+
+.reminder-item:hover {
+  background: #f8f9fa;
+}
+
+.reminder-item:last-child {
+  border-bottom: none;
+}
+
+.reminder-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.reminder-subject {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 8px;
+}
+
+.reminder-status {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.status-pending {
+  background: #fef7e0;
+  color: #b36b00;
+}
+
+.status-notified {
+  background: #e8f0fe;
+  color: #1a73e8;
+}
+
+.status-completed {
+  background: #e6f4ea;
+  color: #137333;
+}
+
+.reminder-to {
+  font-size: 12px;
+  color: #5f6368;
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.reminder-date {
+  font-size: 11px;
+  color: #9aa0a6;
+}
+
+.reminder-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.action-btn {
+  padding: 4px 10px;
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  color: #5f6368;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  font-family: inherit;
+}
+
+.action-btn:hover {
+  background: #f1f3f4;
+}
+
+.action-btn.done-btn {
+  color: #137333;
+  border-color: #137333;
+}
+
+.action-btn.done-btn:hover {
+  background: #e6f4ea;
+}
+
+.action-btn.dismiss-btn {
+  color: #c5221f;
+  border-color: #c5221f;
+}
+
+.action-btn.dismiss-btn:hover {
+  background: #fce8e6;
+}
+
+.snooze-select {
+  padding: 4px 8px;
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  font-size: 11px;
+  font-family: inherit;
+  color: #5f6368;
+  background: #fff;
+  cursor: pointer;
+}
+
+.empty-state {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.empty-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #3c4043;
+  margin-bottom: 4px;
+}
+
+.empty-sub {
+  font-size: 12px;
+  color: #9aa0a6;
+}
