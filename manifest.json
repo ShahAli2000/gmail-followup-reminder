@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Gmail Follow-Up Reminder",
-  "version": "1.0.0",
-  "description": "Get prompted to set follow-up reminders before sending emails in Gmail.",
+  "name": "FollowMail — Gmail Follow-Up Reminder",
+  "version": "1.0.1",
+  "description": "FollowMail prompts you to set follow-up reminders before sending emails in Gmail, so you never forget to follow up.",
   "permissions": [
     "storage",
     "alarms",
