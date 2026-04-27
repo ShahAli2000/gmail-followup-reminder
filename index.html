@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FollowMail — Gmail Follow-Up Reminder Extension</title>
+  <meta name="description" content="FollowMail is a Chrome extension that prompts you to set follow-up reminders before sending emails in Gmail.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #2c2c2c; line-height: 1.6; background: #f7f9fc; }
+    .container { max-width: 800px; margin: 0 auto; padding: 40px 24px; }
+    header { text-align: center; padding: 60px 0 40px; }
+    .logo { width: 96px; height: 96px; border-radius: 22px; margin-bottom: 20px; }
+    h1 { font-size: 38px; color: #1a73e8; margin-bottom: 12px; }
+    .tagline { font-size: 18px; color: #5f6368; max-width: 560px; margin: 0 auto; }
+    section { background: #fff; border-radius: 14px; padding: 32px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    h2 { color: #1a73e8; font-size: 22px; margin-bottom: 16px; }
+    h3 { font-size: 16px; margin-top: 16px; margin-bottom: 6px; color: #3c4043; }
+    p { margin-bottom: 12px; color: #3c4043; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; color: #3c4043; }
+    .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 16px; }
+    .feature { padding: 16px; background: #f1f5fb; border-radius: 10px; }
+    .feature strong { color: #1a73e8; display: block; margin-bottom: 4px; }
+    a { color: #1a73e8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 30px 0; color: #80868b; font-size: 14px; }
+    footer a { margin: 0 10px; }
+    .cta { display: inline-block; background: #1a73e8; color: #fff; padding: 12px 28px; border-radius: 8px; font-weight: 600; margin-top: 16px; }
+    .cta:hover { background: #1557b0; text-decoration: none; }
+    @media (max-width: 600px) {
+      .feature-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="icons/icon128.png" alt="FollowMail logo" class="logo">
+      <h1>FollowMail</h1>
+      <p class="tagline">A Chrome extension that prompts you to set follow-up reminders before sending emails in Gmail — so you never forget to follow up on important conversations.</p>
+    </header>
+
+    <section>
+      <h2>What FollowMail does</h2>
+      <p>When you click "Send" on a Gmail email, FollowMail intercepts the action and shows a brief prompt asking whether you'd like a follow-up reminder. You can pick a preset (Tomorrow, In 3 days, End of week, In 1 week, In 2 weeks) or choose a custom date and time. All reminders default to 10:00 AM on the chosen day.</p>
+      <p>When the reminder is due, you'll receive a Chrome notification with the recipient and subject of the original email. Clicking the notification takes you straight to that thread in Gmail.</p>
+    </section>
+
+    <section>
+      <h2>Key features</h2>
+      <div class="feature-grid">
+        <div class="feature">
+          <strong>Send button interception</strong>
+          Quick prompt before each email goes out
+        </div>
+        <div class="feature">
+          <strong>Smart presets at 10 AM</strong>
+          Tomorrow, end of week, custom dates
+        </div>
+        <div class="feature">
+          <strong>Chrome notifications</strong>
+          Get alerted when a follow-up is due
+        </div>
+        <div class="feature">
+          <strong>Google Calendar sync</strong>
+          Optional — adds reminder as a calendar event with a link back to the email
+        </div>
+        <div class="feature">
+          <strong>Reminder dashboard</strong>
+          Manage, snooze, or dismiss pending reminders from the toolbar
+        </div>
+        <div class="feature">
+          <strong>Local-only storage</strong>
+          Data stays on your device; nothing sent to external servers
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>How Google Calendar integration works</h2>
+      <p>If you opt in by ticking "Also add to Google Calendar" in the reminder prompt, FollowMail uses the <code>calendar.events</code> scope to create a single event in your primary Google Calendar at the chosen reminder time. The event description includes a direct Gmail search link to the original email.</p>
+      <p>FollowMail only creates events you ask it to. It never reads, modifies, or deletes any other data in your calendar. Calendar communication happens directly between your browser and Google's API — none of your data passes through our servers.</p>
+    </section>
+
+    <section>
+      <h2>Privacy &amp; data</h2>
+      <p>FollowMail stores the recipient address, subject, and reminder timing of emails you choose to set reminders for. All this data is kept in Chrome's local storage on your own device. Nothing is transmitted to us or any third party.</p>
+      <p>Read the full <a href="privacy-policy.html">Privacy Policy</a> for details on what is collected, how it's used, and the permissions FollowMail requests.</p>
+    </section>
+
+    <section>
+      <h2>Install</h2>
+      <p>FollowMail is available on the Chrome Web Store.</p>
+      <a href="https://chromewebstore.google.com/detail/aejfckdpeiekimaepbbabaafjkddioed" class="cta">Add to Chrome</a>
+    </section>
+
+    <footer>
+      <p>FollowMail is built and maintained by Ali Shahrestani.</p>
+      <p>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="https://github.com/ShahAli2000/gmail-followup-reminder">Source on GitHub</a>
+        <a href="mailto:ali@shahrestani.co.uk">Contact</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
